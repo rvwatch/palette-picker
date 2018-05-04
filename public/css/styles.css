@@ -1,0 +1,6 @@
+.color-wrap {
+  border: 1px solid blue;
+  display: block;
+  height: 500px;
+  width: 100%;
+}
