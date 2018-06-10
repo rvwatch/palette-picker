@@ -4,15 +4,21 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "chai": "^4.1.2",
+    "chai-http": "^4.0.0",
+    "eslint": "^4.19.1",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
     "knex": "^0.14.6",
+    "mocha": "^5.2.0",
     "pg": "^7.4.3"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "test": "NODE_ENV=test mocha --exit",
+    "start": "nodemon server.js",
+    "eslint": "./node_modules/eslint/bin/eslint.js ./*.js ./db/**/*.js ./test/*.js"
   },
   "keywords": [],
   "author": "",
