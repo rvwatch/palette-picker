@@ -63,7 +63,7 @@ const populateDropdown = function( projects ){
       $('.project-menu').append(`<option id=${id}>${name}</option>`)
       $('.project-list header').after(
         `<div id=${id} class="project-block ${name} ${id}">
-          <button class='delete-project-button'>delete project</button>
+          <button class='delete-project-button'>delete</button>
           <h1>${name}</h1>
         </div>`
       )
