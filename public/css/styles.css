@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -13,7 +17,7 @@ body {
   height: 100%;
 }
 
-article {
+.color {
   display: block;
   width: 100%;
   transition: all .3s;
@@ -25,7 +29,7 @@ article {
   z-index: 1;
 }
 
-article nav {
+.color-options {
   opacity: 0;
   transition: all .3s;
   text-align: center;
@@ -36,14 +40,7 @@ article nav {
   transition: all .3s;
   height: 0;
   width: 0;
-  margin: 20px 0;
   display: inline-block;
-}
-
-.locking-icon img {
-  opacity: 0;
-  transition: all .3s;
-  height: 0;
 }
 
 .hex-code {
@@ -52,7 +49,6 @@ article nav {
   height: 0;
   width: 0;
   font-size: 0px;
-  margin: 20px 0;
   display: inline-block;
 }
 
@@ -68,14 +64,29 @@ article nav {
   text-decoration: none;
 }
 
-article:hover {
+.color:hover {
   z-index: 2;
   width: 150%;
 }
 
-article:hover nav {
+.color:hover .color-options,
+.color.locked .color-options {
   opacity: 1;
+  align-self: start;
+  margin-top: 200px;
 }
+
+.color.locked .color-options .locking-icon,
+.color.locked .color-options .locking-icon img
+.color.locked .color-options .hex-code{
+  opacity: 1;
+  height: 40px;
+  width: 40px;
+  display: inline-block;
+  background-image: url(./images/001-padlock.png);
+  background-size: 40px;
+}
+
 
 article:hover .locking-icon,
 article:hover .locking-icon img {
@@ -87,13 +98,9 @@ article:hover .locking-icon img {
   background-size: 40px;
 }
 
-.locking-icon:hover {
-  color: #fff;
-}
-
 article:hover .hex-code {
   opacity: 1;
-  height: 30px;
+  /* height: 30px; */
   width: 100px;
   font-size: 30px;
 }
@@ -110,8 +117,71 @@ article:hover .generate-hex {
   z-index: 10;
   bottom: 0;
   width: 100%;
-  padding: 20px;
+  padding: 40px;
   background-color: rgba(0, 0, 0, .5);
   text-align: center;
 }
 
+.project-list {
+  color: #ffffff;
+  text-align: left;
+}
+
+.project-list header,
+.new-palette header{
+  display: block;
+  margin: 0 0 30px 0;
+  text-align: center;
+}
+
+.project-list li{
+  display: inline-block;
+  margin: 5px;
+  vertical-align: middle;
+}
+
+.project-list li div {
+  width: 20px;
+  background-color: blue;
+  height: 20px;
+}
+
+.delete-palette {
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  background-size: 20px;
+  background-image: url(./images/garbage.svg);
+  cursor: pointer;
+}
+
+.project-block {
+  display: inline-block;
+  position: relative;
+  width: 330px;
+  border: 1px solid white;
+  padding: 20px;
+  text-align: left;
+  margin: 5px;
+  vertical-align: top;
+}
+
+.project-block h1 {
+  margin: 0 0 15px 0;
+}
+
+.delete-project-button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+hr{
+  display: none;
+  margin: 30px 0;
+}
+
+.project-list {
+  display: none;
+}

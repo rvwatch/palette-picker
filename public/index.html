@@ -11,7 +11,7 @@
   </head>
   <body>
     <section class="color-wrap">
-      <article class="color-one">
+      <article class="color">
         <nav class="color-options">
           <ul>
             <li><a href="#" class="locking-icon"></a></li>
@@ -19,7 +19,7 @@
           </ul>
         </nav>
       </article>
-      <article class="color-two">
+      <article class="color">
           <nav class="color-options">
               <ul>
                 <li><a href="#" class="locking-icon"></a></li>
@@ -28,7 +28,7 @@
               </ul>
             </nav>
       </article>
-      <article class="color-three">
+      <article class="color">
           <nav class="color-options">
               <ul>
                 <li><a href="#" class="locking-icon"></a></li>
@@ -37,16 +37,15 @@
               </ul>
             </nav>
       </article>
-      <article class="color-four">
+      <article class="color">
           <nav class="color-options">
               <ul>
                 <li><a href="#" class="locking-icon"></a></li>
                 <li><a href="#" class="hex-code"></a></li>
-  
               </ul>
             </nav>
       </article>
-      <article class="color-five">
+      <article class="color">
           <nav class="color-options">
               <ul>
                 <li><a href="#" class="locking-icon"></a></li>
@@ -57,7 +56,23 @@
       </article>
     </section>
     <section class="project-wrap">
-      <button id="generate-colors">generate new palette!</button>
+      <article class="new-palette">
+        <header>
+          <button id="generate-colors">new palette</button>
+          <button id="manage-projects">show projects</button>
+        </header>
+      
+        <select class="project-menu"></select>
+        <input id='palette-name' type="text" placeholder="palette name" />
+        <button id="save-palette">save palette</button>
+      </article>
+      <hr />
+      <article class="project-list">
+        <header>
+        <input id='project-name' type="text" placeholder="create new project" />
+        <button id="create-project">save project</button>
+        </header>
+      </article>
     </section>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
