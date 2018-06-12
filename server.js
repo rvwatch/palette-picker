@@ -9,6 +9,8 @@ const bodyParser = require('body-parser');
 app.use(express.static('public'));
 app.use(bodyParser.json()); 
 
+app.set('port', process.env.PORT || 3000);
+
 app.get('/api/v1/projects', (request, response) => {
   database('projects').select()
     .then((projects) => {
@@ -94,6 +96,6 @@ app.delete('/api/v1/palettes/:id', (request, response) => {
     });
 });
 
-app.listen(3000, () => {
+app.listen(app.get('port'), () => {
   console.log('palette picker is listening on 3000');
 })
