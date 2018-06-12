@@ -13,7 +13,7 @@ exports.seed = function(knex, Promise) {
           .then(palettes => {
             return knex('palettes').insert([               	          	            	          	           	
               { name:'pretty', color1: '#1373f7', color2: '#37aed3', color3: '#3a49d4', color4: '#6fb87b', color5: '#16802d', project_id: palettes[0] },
-              { name:'other', color1: '#16802d', color2: '#6fb87b', color3: '#3a49d4', color4: '#37aed3', color5: '#1373f7', project_id: palettes[0] },
+              { name:'other', color1: '#16802d', color2: '#6fb87b', color3: '#3a49d4', color4: '#37aed3', color5: '#1373f7', project_id: palettes[0] }
             ]);
           })
           .then(() => console.log('Seeding complete!'))
